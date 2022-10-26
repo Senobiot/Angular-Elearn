@@ -1,0 +1,42 @@
+$bRadius: 5px;
+
+:host {
+    display: flex;
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.15);
+    border-radius: $bRadius;
+    position: relative;
+    padding: 21px 31px 34px;
+    margin-bottom: 40px;
+
+    &:before {
+        position: absolute;
+        content: '';
+        background: #333E48;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 7px;
+        border-radius: $bRadius 0 0 $bRadius;
+    }
+}
+
+.content {
+    width: 65%;
+    padding: 10px;
+}
+
+.buttons {
+    display: flex;
+    margin-top: 16px;
+}
+
+.properties {
+    span {
+        font-weight: 700;
+    }
+}
+
+.editables {
+    display: flex;
+}

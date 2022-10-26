@@ -1,0 +1,17 @@
+<div class="content">
+    <h3>{{ title }}</h3>
+    <p>{{ description }}</p>
+</div>
+<div class="properties">
+    <div><span>Authors: </span>{{ authors }}</div>
+    <div><span>Created: </span>{{ creationDate | date:"MM.dd.yyyy" }}</div>
+    <div><span>Duration: </span>{{ duration / 60 | number: '1.0-0' }} : {{ duration % 60 }} {{ duration >= 120 ? "hours"
+        : "hour" }}</div>
+    <div class="buttons">
+        <app-button text="Show course"></app-button>
+        <p class="editables" *ngIf="editable">
+            <app-button [currentIcon]="primaryIcon"></app-button>
+            <app-button [currentIcon]="secondaryIcon"></app-button>
+        </p>
+    </div>
+</div>

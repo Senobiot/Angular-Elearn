@@ -1,0 +1,5 @@
+<div *ngFor="let course of courseList">
+    <app-course [editable]="editable" [title]="course['title']" [description]="course['description']"
+        [authors]="course['authors']" [duration]="course['duration']" [editable]="editable">
+    </app-course>
+</div>
