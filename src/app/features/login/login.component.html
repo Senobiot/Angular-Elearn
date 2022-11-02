@@ -1,1 +1,14 @@
-<p>login works!</p>
+<div class="wrapper">
+    <div class="content">
+        <h1>Login</h1>
+        <form [formGroup]="profileForm">
+            <label for="email">Email</label>
+            <input id="email" type="text" formControlName="email" placeholder="Input text">
+            <label for="password">Password</label>
+            <input id="password" type="text" formControlName="password" placeholder="Input text">
+            <app-button class="button" text="login"></app-button>
+        </form>
+            <p>If you don't have an account you may</p>
+            <a href="#">Registration</a>        
+    </div>
+</div>

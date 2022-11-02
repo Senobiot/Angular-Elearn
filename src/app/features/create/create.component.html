@@ -1,0 +1,28 @@
+<div class="wrapper">
+    <div class="content">
+        <h1>Course edit/create page</h1>
+        <form [formGroup]="registrationForm">
+            <fieldset id="courseTitle">
+                <label class="title">Main Info</label>
+                <label for="title">Title</label>
+                <input id="title" type="text" formControlName="title" placeholder="Input text">
+                <label for="description">Description</label>
+                <input id="description" type="textarea" formControlName="description" placeholder="Input text">
+            </fieldset>
+            <fieldset id="courseTitle">
+                <label class="title">Authors</label>
+                <label for="title">Author name</label>
+                <input id="author" type="text" formControlName="author" placeholder="Input text">
+                <app-button class="button" text="create author"></app-button>
+               
+                </fieldset>
+            <label for="email">Email</label>
+            <input id="email" type="text" formControlName="email" placeholder="Input text">
+            <label for="password">Password</label>
+            <input id="password" type="text" formControlName="password" placeholder="Input text">
+            <app-button class="button" text="login"></app-button>
+        </form>
+            <p>If you have an account you may</p>
+            <a href="#">Login</a>        
+    </div>
+</div>

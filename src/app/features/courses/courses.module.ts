@@ -18,4 +18,3 @@ import { CoursesComponent } from './courses.component';
   ]
 })
 export class CoursesModule { }
-
