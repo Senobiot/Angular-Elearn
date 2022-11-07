@@ -7,7 +7,6 @@ import { SharedModule } from '../../shared/shared.module';
   declarations: [CourseComponent],
   imports: [
     CommonModule,
-    SharedModule
   ],
   exports: [
     CourseComponent

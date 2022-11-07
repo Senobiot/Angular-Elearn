@@ -1,4 +1,5 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { faPencil, faTrashCan } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-courses',
@@ -14,4 +15,7 @@ export class CoursesComponent implements OnInit {
 
   ngOnInit(): void {
   }
+
+  primary = faPencil;
+  secondary = faTrashCan;
 }

@@ -4,7 +4,7 @@ import { RegistrationComponent } from "./registration.component";
 
 
 @NgModule({
-  declarations: [],
+  declarations: [RegistrationComponent],
   imports: [
     CommonModule
   ],

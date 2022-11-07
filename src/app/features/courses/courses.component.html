@@ -1,5 +1,11 @@
 <div *ngFor="let course of courseList">
-    <app-course [editable]="editable" [title]="course['title']" [description]="course['description']"
-        [authors]="course['authors']" [duration]="course['duration']" [editable]="editable">
+    <app-course [course]="course" [editable]="editable">
+        <div class="buttons">
+            <app-button text="Show course"></app-button>
+            <p class="editables" *ngIf="editable">
+                <app-button [iconType]="primary"></app-button>
+                <app-button [iconType]="secondary"></app-button>
+            </p>
+        </div>
     </app-course>
 </div>

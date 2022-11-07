@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { IconProp } from '@fortawesome/fontawesome-svg-core';
 
 @Component({
   selector: 'app-button',
@@ -12,6 +13,6 @@ export class ButtonComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  @Input() text = '';
-  @Input() currentIcon: any;
+  @Input() text: string = '';
+  @Input() iconType!: IconProp;
 }
