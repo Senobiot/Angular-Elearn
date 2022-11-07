@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
+import { Component, Input, OnInit } from '@angular/core';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-create',
@@ -7,10 +7,19 @@ import { FormControl, FormGroup } from '@angular/forms';
   styleUrls: ['./create.component.scss']
 })
 export class CreateComponent implements OnInit {
+  @Input() authorsList: any[] = ['author One', 'author Two'];
+  
   registrationForm = new FormGroup({
-    name: new FormControl(''),
-    email: new FormControl(''),
-    password: new FormControl(''),
+    title: new FormControl('', [
+      Validators.required,
+      Validators.pattern(/^[A-z]/),
+      Validators.minLength(3)]),
+    description: new FormControl(''),
+    author: new FormControl(''),
+    duration: new FormControl('', [
+      Validators.required,
+      Validators.pattern(/^[0-9]/),
+      Validators.minLength(3)]),
   });
 
   constructor() { }

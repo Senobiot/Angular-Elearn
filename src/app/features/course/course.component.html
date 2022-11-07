@@ -5,6 +5,6 @@
 <div class="properties">
     <div><span>Authors: </span>{{ course.authors }}</div>
     <div><span>Created: </span>{{ course.creationDate | date:"MM.dd.yyyy" }}</div>
-    <div><span>Duration: </span>{{ formattedDuration() }}</div>
+    <div><span>Duration: </span>{{ course.duration | durationPipe }}</div>
     <ng-content></ng-content>
 </div>

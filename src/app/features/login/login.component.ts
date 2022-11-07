@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-login',
@@ -7,12 +6,13 @@ import { FormControl, FormGroup } from '@angular/forms';
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent implements OnInit {
-  profileForm = new FormGroup({
-    email: new FormControl(''),
-    password: new FormControl(''),
-  });
+  email = '';
+  password = '';
 
   constructor() { }
+
+  onSubmit(data: any) {
+  }
 
   ngOnInit(): void {
   }

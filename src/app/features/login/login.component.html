@@ -1,12 +1,36 @@
 <div class="wrapper">
     <div class="content">
         <h1>Login</h1>
-        <form [formGroup]="profileForm">
+        <form #loginForm = "ngForm"
+        >
             <label for="email">Email</label>
-            <input id="email" type="text" formControlName="email" placeholder="Input text">
+            <input
+                id="email"
+                type="text"
+                name="email"
+                placeholder="Input text"
+                [(ngModel)]="email"
+                #emailNgModel="ngModel"
+                emailValidator
+                [class.is-invalid]="emailNgModel.errors?.['emailInvalid']">
+            <span class="invalid-feedback" 
+                *ngIf="emailNgModel.errors?.['emailInvalid']"
+            > Email is required
+            </span>
             <label for="password">Password</label>
-            <input id="password" type="text" formControlName="password" placeholder="Input text">
-            <app-button class="button" text="login"></app-button>
+            <input 
+                id="password"
+                type="text"
+                name="password"
+                placeholder="Input text"
+                [(ngModel)]="password"
+                #passwordNgModel="ngModel"
+                required>
+            <span class="invalid-feedback" 
+                *ngIf="passwordNgModel.errors"
+            > Password is required
+            </span>
+            <app-button (click)="onSubmit(this.loginForm.value)" class="button" text="login"></app-button>
         </form>
             <p>If you don't have an account you may</p>
             <a href="#">Registration</a>        

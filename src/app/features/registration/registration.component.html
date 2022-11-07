@@ -3,12 +3,24 @@
         <h1>Registration</h1>
         <form [formGroup]="registrationForm">
             <label for="name">Name</label>
-            <input id="name" type="text" formControlName="name" placeholder="Input text">
+            <input id="name" type="text" formControlName="name" placeholder="Input text" [class.is-invalid]="registrationForm.get('name')?.invalid">
+            <span class="invalid-feedback" 
+            *ngIf="registrationForm.get('name')?.invalid"
+            > Name is required
+            </span>
             <label for="email">Email</label>
             <input id="email" type="text" formControlName="email" placeholder="Input text">
+            <span class="invalid-feedback" 
+            *ngIf="registrationForm.get('email')?.invalid"
+            > Email is required
+            </span>
             <label for="password">Password</label>
             <input id="password" type="text" formControlName="password" placeholder="Input text">
-            <app-button class="button" text="login"></app-button>
+            <span class="invalid-feedback" 
+            *ngIf="registrationForm.get('password')?.invalid"
+            > Password is required
+            </span>
+            <app-button (click)="onSubmit(this.registrationForm.value)" class="button" text="login"></app-button>
         </form>
             <p>If you have an account you may</p>
             <a href="#">Login</a>        
