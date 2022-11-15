@@ -2,6 +2,7 @@
     <app-button [text]="loginState"></app-button>
     <app-user-name userName [currentUser]="userName"></app-user-name>
 </app-header>
+<router-outlet></router-outlet>
 <app-courses [editable]="editable" [courseList]="courseList"></app-courses>
 <app-info [title]="infoTitle" [text]="infoText">
     <app-button [text]="infoButtonText"></app-button>
