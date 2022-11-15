@@ -10,7 +10,7 @@ import { AbstractControl, Validator, NG_VALIDATORS } from '@angular/forms';
   }]
 })
 export class EmailValidatorDirective implements Validator {
-  validate(control: AbstractControl) : {[key: string]: any} | null {
+  validate(control: AbstractControl) : {[key: string]: boolean } | null {
     if (control.value && control.value.length < 8 || !control.value?.includes('@')) {
       return { 'emailInvalid': true };
     }

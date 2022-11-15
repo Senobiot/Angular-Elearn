@@ -15,7 +15,7 @@ export class RegistrationComponent implements OnInit {
    }
 
   onSubmit(data: any): void {
-    this.userData = data;;
+    this.userData = data;
   }
 
   ngOnInit(): void {
@@ -29,6 +29,6 @@ export class RegistrationComponent implements OnInit {
         Validators.minLength(3)]),
       email: new FormControl('', [Validators.required, Validators.minLength(8)]),
       password: new FormControl('', [Validators.required, Validators.minLength(5)]),
-    });
+    }, { updateOn: "change" });
   }
 }

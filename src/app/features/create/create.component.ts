@@ -7,7 +7,7 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
   styleUrls: ['./create.component.scss']
 })
 export class CreateComponent implements OnInit {
-  @Input() authorsList: any[] = ['author One', 'author Two'];
+  @Input() authorsList: string[] = ['author One', 'author Two'];
   
   registrationForm = new FormGroup({
     title: new FormControl('', [
@@ -19,10 +19,8 @@ export class CreateComponent implements OnInit {
     duration: new FormControl('', [
       Validators.required,
       Validators.pattern(/^[0-9]/),
-      Validators.minLength(3)]),
+      Validators.minLength(1)]),
   });
-
-  constructor() { }
 
   ngOnInit(): void {
   }
