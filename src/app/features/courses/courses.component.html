@@ -1,3 +1,4 @@
+<app-search placeholder="Search text..." (searchText)="searchItem($event)"></app-search>
 <div *ngFor="let course of courseList">
     <app-course [course]="course" [editable]="editable">
         <div class="buttons">

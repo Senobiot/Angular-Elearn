@@ -1,21 +1,18 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { LoginComponent } from './features/login/login.component';
-import { RegistrationComponent } from './features/registration/registration.component';
-import { CreateComponent } from './features/create/create.component';
 
 const routes: Routes = [
-  // { path: 'login', component: LoginComponent },
-  {  path: 'login',
-    loadChildren: () => import('./features/login/login.component').then(m => m.LoginComponent), },
-  
-  { path: 'registration', component: RegistrationComponent },
-  { path: 'create', component: CreateComponent },
-  { path: '',   redirectTo: '/login', pathMatch: 'full' },
-  { path:'**'   , component: LoginComponent  }
+    { path: 'login', loadChildren: () => import('./features/login/login.module').then(m => m.LoginModule) },
+    { path: 'registration',  loadChildren: () => import('./features/registration/registration.module').then(m => m.RegistrationModule) },
+    { path: 'create', loadChildren: () => import('./features/create/create.module').then(m => m.CreateModule) },
+    { path: 'courses', loadChildren: () => import('./features/courses/courses.module').then(m => m.CoursesModule) },
+    { path: '',   redirectTo: '/login', pathMatch: 'full' },
+    { path: '**', loadChildren: () => import('./features/login/login.module').then(m => m.LoginModule) }
 ]
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [
+    RouterModule.forChild(routes),
+    RouterModule.forRoot([]),],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

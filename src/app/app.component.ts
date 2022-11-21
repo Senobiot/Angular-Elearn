@@ -21,10 +21,6 @@ export class AppComponent {
 
   }
 
-  searchItem(newItem: string) {
-    this.state.authorNames.find(e => e);
-  }
-
   loginState = this.state.isLogined ? 'logout' : 'login';
   userName = this.state.isLogined ? this.state.userName : '';
   infoTitle = this.state.addedCourses ? '' : 'Your List is Empty';
