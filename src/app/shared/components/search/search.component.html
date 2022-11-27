@@ -1,0 +1,12 @@
+<label class="subtitle" for="author">Author name</label>
+<div class="subWrapper">
+    <input id="searchInput"
+        type="text"
+        name="searchInput"
+        #searchInput
+
+        [placeholder]="placeholder"
+        (change)="search(searchInput.value)"
+        >
+    <app-button class="button" text="search"></app-button>                    
+</div>

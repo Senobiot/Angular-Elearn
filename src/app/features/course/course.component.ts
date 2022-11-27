@@ -23,13 +23,4 @@ export class CourseComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
-  formattedDuration(duration = this.course.duration || 0): string {
-    const hours = Math.trunc(duration / 60);
-    const minutes = duration % 60;
-    const ending = hours > 1 ? 'hours' : 'hour';
-
-    return `${hours}:${minutes} ${ending}`;
-  }
-
 }

@@ -1,0 +1,85 @@
+.wrapper {
+    padding-top: 60px;
+}
+
+.content {
+    background: #FFFFFF;
+    border: 1px solid #CFCFCF;
+    border-radius: 4px;
+    padding: 52px 76px 62px 64px;
+    max-width: 1125px;
+    margin: 0 auto;
+
+    fieldset {
+        border: none;
+    }
+    input {
+        min-height: 50px;
+    }
+
+    .title, .subtitle {
+        font-style: normal;
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 32px;
+        display: block;
+        color: #333E48;
+        padding: 10px 0 5px;
+    }
+
+    .subtitle {
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    #description {
+        position: relative;
+        width: 100%;
+
+        &:before {
+            content: '';
+            position: absolute;
+            background: #CFCFCF;
+            width: 100%;
+            bottom: -20px;
+            height: 1px;
+        }
+    }
+
+    .subWrapper {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+
+        input {
+            width: 68%;
+        }
+
+        app-button {
+            width: 28%;
+        }
+    }
+}
+
+.authorList {
+    display: flex;
+}
+
+.author {
+    padding-right: 10px;
+}
+
+.closeBtn {
+    cursor: pointer;
+
+    &:hover {
+        color: red;
+        transition: 0.2s;
+    }
+}
+
+.duration {
+    display: flex;
+    align-items: center;
+    width: 28%;
+}

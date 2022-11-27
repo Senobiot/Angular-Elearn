@@ -6,3 +6,7 @@
 <app-info [title]="infoTitle" [text]="infoText">
     <app-button [text]="infoButtonText"></app-button>
 </app-info>
+<app-login></app-login>
+<app-registration></app-registration>
+<app-create></app-create>
+<app-search placeholder="Search text..." (searchText)="searchItem($event)"></app-search>

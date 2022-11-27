@@ -3,11 +3,10 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { LoginComponent } from './features/login/login.component';
-import { CourseComponent } from './features/course/course.component';
-import { CoursesComponent } from './features/courses/courses.component';
-import { RegistrationComponent } from './features/registration/registration.component';
 import { CoursesModule } from './features/courses/courses.module';
+import { LoginModule } from './features/login/login.module';
+import { RegistrationModule } from './features/registration/registration.module';
+import { CreateModule } from './features/create/create.module';
 @NgModule({
   declarations: [
     AppComponent,
@@ -16,6 +15,9 @@ import { CoursesModule } from './features/courses/courses.module';
     BrowserModule,
     AppRoutingModule,
     CoursesModule,
+    LoginModule,
+    RegistrationModule,
+    CreateModule
   ],
   providers: [],
   bootstrap: [AppComponent]

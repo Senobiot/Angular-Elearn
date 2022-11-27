@@ -1,0 +1,50 @@
+<div class="wrapper">
+    <div class="content">
+        <h1>Course edit/create page</h1>
+        <form [formGroup]="registrationForm">
+            <fieldset>
+                <label class="title">Main Info</label>
+                <label class="subtitle" for="title">Title</label>
+                <input id="title" type="text" formControlName="title" placeholder="Input text">
+                <span class="invalid-feedback" 
+                *ngIf="registrationForm.get('title')?.invalid"
+                > Title is required
+                </span>
+                <label class="subtitle" for="description">Description</label>
+                <input id="description" type="textarea" formControlName="description" placeholder="Input text" rows="4" cols="50">
+                <span class="invalid-feedback" 
+                *ngIf="registrationForm.get('description')?.invalid"
+                > Description is required
+                </span>
+            </fieldset>
+            <fieldset>
+                <label class="title">Authors</label>
+                <label class="subtitle" for="author">Author name</label>
+                <div class="subWrapper">
+                    <input id="author" type="text" formControlName="author" placeholder="Input text">
+                    <app-button class="button" text="create author"></app-button>
+                </div>
+                <label class="subtitle" for="author">Author ist</label>
+                <div class="authorList">
+                    <div *ngFor="let author of authorsList">
+                        <p class="author">{{ author }} <span class="closeBtn">x</span></p>
+                    </div>
+                </div>
+            </fieldset>
+            <fieldset>
+                <label class="title">Duration</label>
+                <label class="subtitle" for="title">Duration</label>
+                <div class="subWrapper">
+                    <input id="duration" type="text" formControlName="duration" placeholder="Input text">
+                    <p class="duration">{{ registrationForm.value.duration | durationPipe }}</p>
+                </div>
+                <span class="invalid-feedback" 
+                *ngIf="registrationForm.get('duration')?.invalid"
+                > duration is required
+                </span>
+            </fieldset>
+            <app-button class="button" text="cancel"></app-button>
+            <app-button class="button" text="create course"></app-button>
+        </form>
+    </div>
+</div>

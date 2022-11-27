@@ -1,0 +1,54 @@
+.wrapper {
+    padding-top: 270px;
+    background-color: #F7F7F7;
+    text-align: center;
+
+    .content {
+        width: 585px;
+        margin: 0 auto;
+
+        form {
+            text-align: left;
+            width: 286px;
+            margin: 0 auto 50px;
+
+            label, input {
+                display: block;
+            }
+
+            label {
+                font-weight: 700;
+                font-size: 16px;
+                line-height: 20px;
+                margin-top: 20px;
+            }
+
+            input {
+                height: 50px;
+                border: 1px solid #CFCFCF;
+                border-radius: 4px;
+                width: 100%;
+                margin-bottom: 10px;
+            }
+
+            .button {
+                margin: 0 auto;
+                display: flex;
+            }
+        }
+
+        a {
+            display: block;
+            padding-top: 5px;
+            text-decoration: none;
+            color: #000;
+            font-weight: 700;
+        }
+    }
+}
+
+.loginBlock {
+    background: #FFFFFF;
+    border: 1px solid #CFCFCF;
+    border-radius: 4px;
+}
