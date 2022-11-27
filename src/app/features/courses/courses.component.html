@@ -1,11 +1,11 @@
 <app-search placeholder="Search text..." (searchText)="searchItem($event)"></app-search>
 <div *ngFor="let course of courseList">
-    <app-course [course]="course" [editable]="editable">
+    <app-course [course]="course" [editable]="editable"  [routerLink]="['/courses', course.id]">
         <div class="buttons">
-            <app-button text="Show course"></app-button>
+            <app-button text="Show course" (click)="show(course.id)"></app-button>
             <p class="editables" *ngIf="editable">
                 <app-button [iconType]="primary"></app-button>
-                <app-button [iconType]="secondary"></app-button>
+                <app-button [iconType]="secondary" (click)="edit(course.id)"></app-button>
             </p>
         </div>
     </app-course>

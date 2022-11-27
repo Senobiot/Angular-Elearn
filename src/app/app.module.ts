@@ -8,7 +8,8 @@ import { RegistrationModule } from './features/registration/registration.module'
 import { CreateModule } from './features/create/create.module';
 import { AuthService } from './auth/services/auth.service';
 import { AuthInterceptorService } from './auth/interceptors/token.interceptor';
-import { HTTP_INTERCEPTORS } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { UserStoreService } from './services/user-store.service';
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,7 +20,8 @@ import { HTTP_INTERCEPTORS } from '@angular/common/http';
     CoursesModule,
     LoginModule,
     RegistrationModule,
-    CreateModule
+    CreateModule,
+    HttpClientModule
   ],
   providers: [
     AuthService,
@@ -29,6 +31,7 @@ import { HTTP_INTERCEPTORS } from '@angular/common/http';
       useClass: AuthInterceptorService,
       multi: true
      },
+     UserStoreService
   ],
   bootstrap: [AppComponent]
 })

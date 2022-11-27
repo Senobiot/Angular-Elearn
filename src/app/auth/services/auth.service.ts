@@ -7,7 +7,7 @@ import { SessionStorageService } from './session-storage.service';
   providedIn: 'root',
 })
 export class AuthService {
-  endpoint: string = 'http://localhost:4000/api/#';
+  endpoint: string = 'http://localhost:4000';
   headers = new HttpHeaders().set('Content-Type', 'application/json');
   private isAuthorized$$ = new BehaviorSubject<boolean>(false);
   public isAuthorized$ = this.isAuthorized$$.asObservable();

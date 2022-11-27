@@ -10,9 +10,6 @@ declare const mockedCourseList: any;
 export class AppComponent {
   title = 'courses-app';
 
-  editable = true;
-  courseList = mockedCourseList;
-
   state = {
     isLogined: true,
     userName: 'Aliaksandr Kulik',
