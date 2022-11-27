@@ -44,7 +44,7 @@
                 </span>
             </fieldset>
             <app-button class="button" text="cancel"></app-button>
-            <app-button class="button" text="create course"></app-button>
+            <app-button class="button" text="create course" (click)="onSubmit(this.registrationForm.value)"></app-button>
         </form>
     </div>
 </div>

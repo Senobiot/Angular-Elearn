@@ -1,5 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { CoursesStoreService } from 'src/app/services/courses-store.service';
+import { AddRequest } from 'src/app/services/courses.service';
 
 @Component({
   selector: 'app-create',
@@ -22,7 +24,13 @@ export class CreateComponent implements OnInit {
       Validators.minLength(1)]),
   });
 
+  onSubmit(data: AddRequest) {
+    this.dataService.createCourse(data)
+  }
+
   ngOnInit(): void {
   }
+
+  constructor( private dataService: CoursesStoreService ){}
 
 }

@@ -10,19 +10,12 @@ declare const mockedCourseList: any;
 export class AppComponent {
   title = 'courses-app';
 
-  editable = true;
-  courseList = mockedCourseList;
-
   state = {
     isLogined: true,
     userName: 'Aliaksandr Kulik',
     addedCourses: 0,
     authorNames: [],
 
-  }
-
-  searchItem(newItem: string) {
-    this.state.authorNames.find(e => e);
   }
 
   loginState = this.state.isLogined ? 'logout' : 'login';

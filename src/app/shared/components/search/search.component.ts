@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { CoursesStoreService } from 'src/app/services/courses-store.service';
 
 @Component({
   selector: 'app-search',

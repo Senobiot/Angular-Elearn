@@ -22,6 +22,6 @@ const components = [
     FontAwesomeModule,
     FormsModule
   ],
-  exports: [components, EmailValidatorDirective, DurationPipe, CreationDatePipe]
+  exports: [components, EmailValidatorDirective, DurationPipe, CreationDatePipe, ]
 })
 export class SharedModule { }

@@ -2,11 +2,4 @@
     <app-button [text]="loginState"></app-button>
     <app-user-name userName [currentUser]="userName"></app-user-name>
 </app-header>
-<app-courses [editable]="editable" [courseList]="courseList"></app-courses>
-<app-info [title]="infoTitle" [text]="infoText">
-    <app-button [text]="infoButtonText"></app-button>
-</app-info>
-<app-login></app-login>
-<app-registration></app-registration>
-<app-create></app-create>
-<app-search placeholder="Search text..." (searchText)="searchItem($event)"></app-search>
+<router-outlet></router-outlet>
