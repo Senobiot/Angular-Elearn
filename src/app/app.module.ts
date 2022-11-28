@@ -10,6 +10,9 @@ import { AuthService } from './auth/services/auth.service';
 import { AuthInterceptorService } from './auth/interceptors/token.interceptor';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { UserStoreService } from './services/user-store.service';
+import { StoreModule } from '@ngrx/store';
+import { effects, reducers } from './store';
+import { EffectsModule } from '@ngrx/effects';
 @NgModule({
   declarations: [
     AppComponent,
@@ -21,7 +24,9 @@ import { UserStoreService } from './services/user-store.service';
     LoginModule,
     RegistrationModule,
     CreateModule,
-    HttpClientModule
+    HttpClientModule,
+    StoreModule.forRoot(reducers),
+    EffectsModule.forRoot(effects) 
   ],
   providers: [
     AuthService,
